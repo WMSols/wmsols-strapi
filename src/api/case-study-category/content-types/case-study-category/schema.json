@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_categories",
+  "info": {
+    "singularName": "case-study-category",
+    "pluralName": "case-study-categories",
+    "displayName": "CaseStudyCategories"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}
