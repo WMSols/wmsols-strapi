@@ -25,9 +25,7 @@
       "required": true,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "files"
       ]
     },
     "coverLetter": {
@@ -36,7 +34,7 @@
     "phone": {
       "type": "integer"
     },
-    "jobTitle": {
+    "title": {
       "type": "text",
       "required": true
     }

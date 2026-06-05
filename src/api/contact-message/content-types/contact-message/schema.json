@@ -29,13 +29,13 @@
     "requiredService": {
       "type": "string"
     },
-    "phone": {
-      "type": "integer"
-    },
     "budget": {
       "type": "string"
     },
     "reference": {
+      "type": "string"
+    },
+    "phone": {
       "type": "string"
     }
   }

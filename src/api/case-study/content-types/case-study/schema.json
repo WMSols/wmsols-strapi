@@ -52,7 +52,7 @@
       "type": "text"
     },
     "chellenge": {
-      "type": "blocks"
+      "type": "text"
     }
   }
 }

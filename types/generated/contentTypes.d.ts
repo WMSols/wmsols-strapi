@@ -551,7 +551,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'oneToOne',
       'api::case-study-category.case-study-category'
     >;
-    chellenge: Schema.Attribute.Blocks;
+    chellenge: Schema.Attribute.Text;
     client: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -605,7 +605,7 @@ export interface ApiContactMessageContactMessage
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    phone: Schema.Attribute.Integer;
+    phone: Schema.Attribute.String;
     projectDetails: Schema.Attribute.Text & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     reference: Schema.Attribute.String;
@@ -633,7 +633,6 @@ export interface ApiJobApplicationJobApplication
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
-    jobTitle: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -643,8 +642,9 @@ export interface ApiJobApplicationJobApplication
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
-    resume: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+    resume: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
+    title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -680,6 +680,7 @@ export interface ApiJobPostJobPost extends Struct.CollectionTypeSchema {
     requirements: Schema.Attribute.Blocks;
     responsiblities: Schema.Attribute.Blocks;
     skills: Schema.Attribute.Text;
+    slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     type: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
