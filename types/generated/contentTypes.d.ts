@@ -625,7 +625,7 @@ export interface ApiJobApplicationJobApplication
     singularName: 'job-application';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     coverLetter: Schema.Attribute.Text;
@@ -642,8 +642,7 @@ export interface ApiJobApplicationJobApplication
     name: Schema.Attribute.String & Schema.Attribute.Required;
     phone: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
-    resume: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
+    resume: Schema.Attribute.Media<'images' | 'files'>;
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
