@@ -632,6 +632,9 @@ export interface ApiJobApplicationJobApplication
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    currentStatus: Schema.Attribute.Enumeration<
+      ['Pending', 'Shortlisted', 'Replied', 'Rejected']
+    >;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
