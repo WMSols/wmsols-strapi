@@ -634,7 +634,8 @@ export interface ApiJobApplicationJobApplication
       Schema.Attribute.Private;
     currentStatus: Schema.Attribute.Enumeration<
       ['Pending', 'Shortlisted', 'Replied', 'Rejected']
-    >;
+    > &
+      Schema.Attribute.DefaultTo<'Pending'>;
     email: Schema.Attribute.Email & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

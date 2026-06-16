@@ -40,6 +40,7 @@
     },
     "currentStatus": {
       "type": "enumeration",
+      "default": "Pending",
       "enum": [
         "Pending",
         "Shortlisted",
